@@ -1,0 +1,19 @@
+:root {
+    --white: #f1f1f1;
+    --black: #181818;
+}
+
+#dark {
+    background: var(--black);
+    color: var(--white);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#refresh-button {
+    margin: 1em;
+    font-size: medium;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>HungryPickle.github.io :: Number Tricks</title>
+</head>
+<body id="dark">
+    <h1>Magic Number 7</h1>
+
+    <script>
+        'use strict';
+        var userString = prompt("Enter a whole number");
+        var userNum = parseInt(userString);
+        var step1 = userNum + 9;
+        var step2 = step1 * 2;
+        var step3 = step2 - 4;
+        var step4 = step3 / 2;
+        var step5 = step4 - userNum;
+        document.write( 
+            `Your starting number was ${userNum}.<br>` +
+            `I added 9 to ${userNum}. The new number is ${step1}.<br>` + 
+            `I multiplied ${step1} by 2. The new number is ${step2}.<br>` +
+            `I subtracted 4 from ${step2}. The new number is ${step3}.<br>` +
+            `I divided ${step3} by 2. The new number is ${step4}.<br>` +
+            `I subtracted your original number ${userNum} from ${step4}.<br>` +
+            `Your final number is ${step5}.<br>`
+        );
+        alert('Your final number is ' + step5);
+    </script>
+
+    <button id="refresh-button">Play Again?</button>
+
+    <script>
+        const refreshButton = document.querySelector('#refresh-button');
+        refreshButton.addEventListener('click', function() { location.reload(); });
+    </script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>
